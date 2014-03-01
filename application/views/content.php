@@ -1,3 +1,4 @@
+
       <div id="page-wrapper">
 
         <div class="row">
@@ -12,6 +13,14 @@
             </div>
           </div>
         </div><!-- /.row -->
+
+        <div class="row">
+          <h2>Event Name</h2> <h4> <strong>at</strong> @Location <strong>on</strong> Monday 01,01,2014</h4>
+          <p>Event Desciprtion</p>
+
+        </div>
+
+
 
         <div class="row">
           <div class="col-lg-3">

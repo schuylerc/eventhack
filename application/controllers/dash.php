@@ -21,4 +21,11 @@ class Dash extends CI_Controller {
 	public function test(){
 		//$this->load->view('folder/namewithoutphp');
 	}
+
+	public function signin()
+	{
+		
+		$this->load->view('signin');
+		
+	}
 }

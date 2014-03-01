@@ -748,6 +748,8 @@ class Auth extends CI_Controller {
 
 		$view_html = $this->load->view($view, $this->viewdata, $render);
 
+		/*$view_html = $this->load->view('signin', $message);*/
+
 		if (!$render) return $view_html;
 	}
 
