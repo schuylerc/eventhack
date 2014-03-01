@@ -19,6 +19,6 @@ class Dash extends CI_Controller {
 	
 	}
 	public function test(){
-		//$this->load->view('folder/namewithoutphp');
+		$this->load->view('event/view');
 	}
 }
