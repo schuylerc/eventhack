@@ -43,5 +43,10 @@ class Dash extends CI_Controller {
 		echo $this->event_model->add_new_event($eName, $eDate, $eLocation, $eDesc);
 
 	}
+	
+	public function ajax_timeline_json(){
+		$object = $this->event_model->generate_event_json();
+		echo $object;
+	}
 
 }

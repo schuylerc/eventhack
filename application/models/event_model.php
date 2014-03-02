@@ -61,6 +61,7 @@ class Event_model extends CI_Model{
 		return $hash;
 	}
 
+
 	public function get_event_details($handle){
 		
 		$query = $this->db->get_where('events', array('handle' => $handle));
@@ -68,5 +69,12 @@ class Event_model extends CI_Model{
 		return $toreturn[0];
 	}
 
+
+
+	
+	public function generate_event_json(){
+		$query = $this->db->get_where('events');
+		return json_encode($query->result_array());
+	}
 
 }
