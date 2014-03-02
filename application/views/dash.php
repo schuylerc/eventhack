@@ -156,7 +156,7 @@
           </div>
         </div><!-- /.row -->
 
-<div class="row">
+<div class="row hidden-xs">
 <div class="col-lg-12">
   <script src="/assets/js/jquery-2.1.0.min.js"></script>
   <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>

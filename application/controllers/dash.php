@@ -11,6 +11,7 @@ class Dash extends MY_Controller {
 	}
 	
 	public function index(){
+		$this->checkLogin();
 		$this->beginView();
 
         $data['event'] = $this->event_model->get_events_list();

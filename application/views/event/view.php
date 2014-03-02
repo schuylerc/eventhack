@@ -15,14 +15,15 @@
 
 	<div class="row-fluid">
 		<span class="col-lg-12">
-			<h1 class = "event-heading"><?php echo $eDetail->event_name; ?></h1>
+			<h1 class = "event-heading"><?php echo $eDetail->event_name; ?>
+				<br/> <br/>
+				<button type="button" class="btn btn-primary btn-lg">Register!</button> 
+			</h1>
+
+			
 		</span>
 	</div>
-	<div class = "row-fluid">
-		<span align = "center" class="col-lg-12">
-			<button type="button" class="btn btn-primary btn-lg">Register!</button>
-		</span>
-	</div> 
+	 
 	<br><br>
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-where">

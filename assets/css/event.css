@@ -17,7 +17,8 @@
 .event-heading{
 	font-weight:200;
 	text-align: center;
-	text-size:30px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .event-what{
