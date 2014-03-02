@@ -33,10 +33,29 @@
 		</span>
 	</div> 
 	
-	<div class = "row-fluid"><div class = ".col-lg-12 event-what">Part 1</div></div> <!--  includes wireless info and other misc info -->
-	<div class = "row-fluid"><div class = "row-fluid" ".col-lg-12 event-where">Part 2</div></div> <!-- includes parking info, campus map, floor plan -->
-	<div class = "row-fuild"><div class = ".col-lg-12 event-when">Part 3</div></div> <!-- include countdown timer,  -->
-	<div class = "row-fluid"><div class = ".col-lg-12 event-additional-info">Part 4</div></div> <!--  some secondary information -->
+	<div class = "row-fluid">
+		<div class = "col-lg-12 event-what">
+		 <h2 id = "event-what-heading">What:</h2>
+		</div>
+	</div> <!--  includes wireless info and other misc info -->
+	
+	<div class = "row-fluid">
+		<div class = "col-lg-12 event-where">
+			<h2 id = "event-where-heading">Where:</h2>
+		</div>
+	</div> <!-- includes parking info, campus map(google map api), floor plans -->
+	
+	<div class = "row-fuild">
+		<div class = "col-lg-12 event-when">
+			<h2 id = "event-when-heading">When:</h2>
+		</div>
+	</div> <!-- include countdown timer,  -->
+	
+	<div class = "row-fluid">
+		<div class = "col-lg-12 event-additional-info">
+			<h2 id = "event-additional-info-heading">Additional Information:</h2>
+		</div>
+	</div> <!--  some secondary information -->
 	
 	
 	
