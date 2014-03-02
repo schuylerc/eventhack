@@ -17,6 +17,7 @@ class Event extends MY_Controller {
 	
 	}
 	public function view($handle = NULL){
+		$this->beginView();
 		//this will load the event layout when the stuff below is figured out
 		if(!isset($handle)){
 			//error message because event wasn't passed in
@@ -27,9 +28,11 @@ class Event extends MY_Controller {
 		$data['eDetail'] = $this->event_model->get_event_details($handle);
 		$this->load->view('event/view', $data);
 		}
+		$this->endView();
 	}
 
 	public function edit($handle = NULL){
+		$this->beginView();
 		//this will load the event layout when the stuff below is figured out
 		if(!isset($handle)){
 			//error message because event wasn't passed in
@@ -40,5 +43,7 @@ class Event extends MY_Controller {
 		$data['eDetail'] = $this->event_model->get_event_details($handle);
 		$this->load->view('event/edit', $data);
 		}
+		$this->endView();
 	}
+	
 }
