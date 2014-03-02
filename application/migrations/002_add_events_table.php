@@ -49,7 +49,7 @@ class Migration_Add_events_table extends CI_Migration {
 				'event_description' => 'Administrator forgot to fill this out',
 				'start_time' => '2014-05-05 12:23:25',
 				'finish_time' => '2014-05-05 16:27:26',
-				'location' => 'Somewhere'
+				'location' => 'University Hall'
 			),
 			array(
 				'id' => '2',
@@ -58,7 +58,7 @@ class Migration_Add_events_table extends CI_Migration {
 				'event_description' => 'Administrator did it again',
 				'start_time' => '2014-05-07 22:27:03',
 				'finish_time' => '2014-05-08 18:19:20',
-				'location' => 'Somewhere AWESOME'
+				'location' => 'Enterprise Hall'
 			)
 		);
 		$this->db->insert_batch('events', $data);
