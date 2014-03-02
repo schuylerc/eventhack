@@ -28,4 +28,17 @@ class Event extends MY_Controller {
 		$this->load->view('event/view', $data);
 		}
 	}
+
+	public function edit($handle = NULL){
+		//this will load the event layout when the stuff below is figured out
+		if(!isset($handle)){
+			//error message because event wasn't passed in
+			$this->load->view('event/notfound');
+		}
+		else{
+		//TODO - $data['event'] = $this->event_model->get_event($handle);
+		$data['eDetail'] = $this->event_model->get_event_details($handle);
+		$this->load->view('event/edit', $data);
+		}
+	}
 }
