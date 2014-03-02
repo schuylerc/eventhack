@@ -154,6 +154,7 @@
 
 <div class="row">
 <div class="col-lg-12">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
         <script>
             $(document).ready(function() {
