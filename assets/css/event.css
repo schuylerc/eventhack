@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+.info-window{
+	text-align:center;
+	background: blue;
+	height: 20%;
+	border-radius: 20%;
+	vertical-align:center;
+}
