@@ -20,6 +20,9 @@
 <link rel="stylesheet" 
 	href="/assets/css/event.css">
 	
+<!-- countdown -->
+<script src="/assets/js/countdown.js"></script>
+
 </head>
 <body>
 
@@ -36,18 +39,18 @@
 	
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-what">
-		 <h2 id = "event-heading">What:</h2>
+		 <h2 class = "event-heading">What:</h2>
 		 <p class = "event-text"><?php echo $eDetail->event_description; ?></p>
 		</div>
 	</div> <!--  includes wireless info and other misc info -->
 	
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-where">
-			<h2 id = "event-heading">Where:</h2>
+			<h2 class = "event-heading">Where:</h2>
 			<div class = "row-fluid">
-				<p class = "event-text"><?php echo $eDetail->location; ?></p>
-				<p class = "event-text">Building: {The Hub Ballroom}</p>
-				<p class = "event-text">Parking: {Lot C}</p>
+				<p class = "event-text"><?php echo $eDetail->address; ?></p>
+				<p class = "event-text">Building: <?php echo $eDetail->location; ?></p>
+				<p class = "event-text">Parking: <?php echo $eDetail->parking_location; ?></p>
 			</div>
 			<span class = "col-lg-1"></span>
 			<div class = "row-fluid">
@@ -62,16 +65,20 @@
 	
 	<div class = "row-fuild">
 		<div class = "col-lg-12 event-when">
-			<h2 id = "event-heading">When:</h2>
+			<h2 class = "event-heading">When:</h2>
 			<p class = "event-date-text"><?php echo date("l, F jS, Y",strtotime($eDetail->start_time)); ?></p>
 			<p class = "event-date-text">at <?php echo date("h:iA",strtotime($eDetail->start_time)); ?></p>
+			
+			<script>
+				var myCountdown1 = new Countdown({time:316});
+			</script>
 		</div>
 		
 	</div>
 	
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-additional-info">
-			<h2 id = "event-heading">Additional Information:</h2>
+			<h2 class = "event-heading">Additional Information:</h2>
 
 		</div>
 	</div> <!--  some secondary information -->
