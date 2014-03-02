@@ -18,7 +18,7 @@ body { height: 100%; margin: 0; padding: 0 }
 			var mapOptions = {
 				center: new google.maps.LatLng(38.830121, -77.307258), 
 				scrollwheel: false,
-				zoom: 16
+				zoom: 15
 			};
 			var map = new google.maps.Map(document.getElementById("map-canvas"),
 					mapOptions);
@@ -31,10 +31,10 @@ body { height: 100%; margin: 0; padding: 0 }
 			marker.setMap(map);
 			
 			//set the building marker
-			var markerOptions = {
+			var markerOptions2 = {
 					position: new google.maps.LatLng(38.830673, -77.304732)
 			};
-			var marker2 = new google.maps.Marker(markerOptions);
+			var marker2 = new google.maps.Marker(markerOptions2);
 			marker2.setMap(map);
 			
 			//set the info windows for the markers
@@ -53,8 +53,32 @@ body { height: 100%; margin: 0; padding: 0 }
 			google.maps.event.addListener(marker2, 'click', function(e){
 				infoWindow2.open(map, marker2)
 			}); 
+
+			var directionsService = new google.maps.DirectionsService();
+			var directionsRequest = {
+			  origin: markerOptions['position'],
+			  destination: markerOptions2['position'],
+			  travelMode: google.maps.DirectionsTravelMode.WALKING,
+			  unitSystem: google.maps.UnitSystem.METRIC
+			};
 			
-			}
+			directionsService.route(
+					  directionsRequest,
+					  function(response, status)
+					  {
+					    if (status == google.maps.DirectionsStatus.OK)
+					    {
+					      new google.maps.DirectionsRenderer({
+					        map: map,
+					        directions: response,
+					        suppressMarkers: true
+					      });
+					    }
+					    else
+					      $("#error").append("Unable to retrieve your route<br />");
+					  }
+					);
+		}
 		google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 		

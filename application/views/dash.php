@@ -13,7 +13,8 @@
                                 type: 'POST',
                                 url: '/dash/ajax_add_event',
                                 data: { EventName: $("#EventName").val(), EventDate: $("#EventDate").val(),
-                                        EventLocation: $("#EventLocation").val(), EventDesc: $("#EventDesc").val()
+                                        EventLocation: $("#EventLocation").val(), EventDesc: $("#EventDesc").val(),
+                                        EventEndDate: $("#EventEndDate").val()
                                  },
                                 beforeSend:function(){
                                   // this is where we append a loading image
@@ -31,7 +32,7 @@
                                 error:function(){
                                   // failed request; give feedback to user
                                   $('#eventStatus').append('An Error occured while creating this survey');
-                                  $('#eventStatus').append(data);
+                                  
                                 }
                                 });
                               }
@@ -67,10 +68,34 @@
 
                           <!-- Text input-->
                           <div class="control-group">
-                            <label class="control-label" for="textinput">Event Date</label>
+                            <label class="control-label" for="textinput">Event Start Date</label>
                             <div class="controls">
                               <input id="EventDate" name="EventDate" type="date" placeholder="mm/dd/yyyy" class="input-xlarge" required="">
                               <p class="help-block">Event Date</p>
+                            </div>
+                          </div>
+
+                           <div class="control-group">
+                            <label class="control-label" for="textinput">Event Start Time</label>
+                            <div class="controls">
+                              <input id="startTime" name="startTime" type="time" placeholder="hh:mm" class="input-xlarge" required="">
+                              <p class="help-block">Event Start Time </p>
+                            </div>
+                          </div>
+
+                          <div class="control-group">
+                            <label class="control-label" for="textinput">Event End Date</label>
+                            <div class="controls">
+                              <input id="EventEndDate" name="EventEndDate" type="date" placeholder="mm/dd/yyyy" class="input-xlarge" required="">
+                              <p class="help-block">Event End Date</p>
+                            </div>
+                          </div>
+
+                           <div class="control-group">
+                            <label class="control-label" for="textinput">Event End Time</label>
+                            <div class="controls">
+                              <input id="endTime" name="endTime" type="time" placeholder="hh:mm" class="input-xlarge" required="">
+                              <p class="help-block">Event End Time </p>
                             </div>
                           </div>
 
