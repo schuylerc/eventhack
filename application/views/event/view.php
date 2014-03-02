@@ -50,11 +50,13 @@
 				<p class = "event-text">Building: {Engineering Building 4021}</p>
 				<p class = "event-text">Parking: {Lot K}</p>
 			</div>
+			<span class = "col-lg-1"></span>
 			<div class = "row-fluid">
-					<span class = "col-lg-12">
+					<span class = "col-lg-10">
 						<iframe width="100%" height="75%" src = "/dash/loadMap"></iframe>
 					</span>
 			</div>
+			<span class = "col-lg-1"></span>
 		</div>
 		
 	</div> <!-- includes parking info, campus map(google map api), floor plans -->
