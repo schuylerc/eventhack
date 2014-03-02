@@ -21,11 +21,4 @@ class Dash extends CI_Controller {
 	public function test(){
 		$this->load->view('event/view');
 	}
-
-	public function signin()
-	{
-		
-		$this->load->view('signin');
-		
-	}
 }
