@@ -48,6 +48,8 @@ class Dash extends MY_Controller {
 	
 	public function ajax_timeline_json(){
 		$object = $this->event_model->generate_event_json();
+		header('Content-type: text/json');
+		header('Content-type: application/json');
 		echo $object;
 	}
 
