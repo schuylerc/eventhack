@@ -20,8 +20,6 @@
 <link rel="stylesheet" 
 	href="/assets/css/event.css">
 	
-<!-- Javascript here -->
-
 </head>
 <body>
 
@@ -68,10 +66,8 @@
 			<p class = "event-date-text"><?php echo date("l, F jS, Y",strtotime($eDetail->start_time)); ?></p>
 			<p class = "event-date-text">at <?php echo date("h:iA",strtotime($eDetail->start_time)); ?></p>
 		</div>
-		<div>
-
-		</div>
-	</div> <!-- include countdown timer,  -->
+		
+	</div>
 	
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-additional-info">
