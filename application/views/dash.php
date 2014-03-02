@@ -154,7 +154,7 @@
 
 <div class="row">
 <div class="col-lg-12">
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="/assets/js/jquery-2.1.0.min.js"></script>
   <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
         <script>
             $(document).ready(function() {
@@ -162,7 +162,7 @@
                     type:       'timeline',
                     width:      '800',
                     height:     '600',
-                    source:     '/dash/ajax_timeline_json',
+                    source:     '<?php echo base_url();?>/dash/ajax_timeline_json',
                     embed_id:   'my-timeline'
                 });
             });
