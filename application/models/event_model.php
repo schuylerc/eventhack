@@ -44,7 +44,12 @@ class Event_model extends CI_Model{
 		 );
 		
 		$query = $this->db->insert('events', $data);
+		//generate handle and return it
+		return $this->generate_handle($this->db->insert_id());
 
-
+	}
+	
+	public function generate_handle($event_id){
+		return hash ("md5", $event_id);
 	}
 }

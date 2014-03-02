@@ -40,7 +40,7 @@ class Dash extends CI_Controller {
 		$eLocation = $_POST['EventLocation'];
 		$eDesc = $_POST['EventDesc']; 
 
-		$this->event_model->add_new_event($eName, $eDate, $eLocation, $eDesc);
+		echo $this->event_model->add_new_event($eName, $eDate, $eLocation, $eDesc);
 
 	}
 
