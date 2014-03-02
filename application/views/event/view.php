@@ -1,4 +1,16 @@
 
+<!-- Add custom CSS here -->
+<link href="/assets/css/sb-admin.css" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!-- Page Specific CSS -->
+<link rel="stylesheet"
+	href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+<link rel="stylesheet" 
+	href="/assets/css/event.css">
+	
+<!-- countdown -->
+<script src="/assets/js/countdown.js"></script>
+
 <body>
 
 	<div class="row-fluid">
@@ -23,17 +35,13 @@
 		<div class = "col-lg-12 event-where">
 			<h2 class = "event-heading">Where:</h2>
 			<div class = "row-fluid">
-				<p class = "event-text"><?php echo $eDetail->address; ?></p>
-				<p class = "event-text">Building: <?php echo $eDetail->location; ?></p>
+				<p class = "event-text"><?php echo $eDetail->location; ?></p>
+				<p class = "event-text">Building: <?php echo $eDetail->address; ?></p>
 				<p class = "event-text">Parking: <?php echo $eDetail->parking_location; ?></p>
 			</div>
-			<span class = "col-lg-1"></span>
-			<div class = "row-fluid">
-					<span class = "col-lg-10">
-						<iframe width="100%" height="75%" src = "/dash/loadMap"></iframe>
-					</span>
+			<div class = "col-lg-12-offset-1" style="height: 90%; width: 100%">
+				<iframe width="100%" height="75%" src = "/dash/loadMap"></iframe>
 			</div>
-			<span class = "col-lg-1"></span>
 		</div>
 		
 	</div> <!-- includes parking info, campus map(google map api), floor plans -->
