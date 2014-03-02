@@ -27,6 +27,8 @@ public function __construct()
 */
 public function beginView(){
 	//TODO - load header items
+	$data['user'] = $this->ion_auth->user()->row();
+	$this->load->view('templates/header', $data);
 }
 
 /**
@@ -38,6 +40,7 @@ public function beginView(){
 */
 public function endView(){
 	//TODO - load Footer items
+	$this->load->view('templates/footer');
 }
 
 /**
