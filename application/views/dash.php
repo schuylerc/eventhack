@@ -1,4 +1,4 @@
-      <div id="page-wrapper" style="background-color:#ffffff">
+      <div id="page-wrapper" style="background-color:#dff0d8">
 
         <div class="row">
           <div class="col-lg-12">
@@ -184,7 +184,7 @@
   ?>
   
           <div class="col-lg-6">
-            <div class="event">
+            <div class="event" style = "border: 1px solid black;">
             <h2><a href='/event/view/<?php echo $event_item->handle; ?>'> <?php echo $event_item->event_name; ?> </a></h2>
             <h4> <strong>at</strong> <?echo $event_item->location;?> <strong>on</strong> <?php echo $event_item->start_time;?> </h4>
             <p> <?php echo $event_item->event_description; ?> </p>
