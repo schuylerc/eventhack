@@ -13,7 +13,7 @@
 
     <!-- Add custom CSS here -->
     <link href="/assets/css/sb-admin.css" rel="stylesheet">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
     <!-- Page Specific CSS -->
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
   </head>
@@ -51,7 +51,7 @@
                 <li class="message-preview">
                   <a href="#">
                     <span class="avatar"><img src="http://placehold.it/50x50"></span>
-                    <span class="name">John Smith:</span>
+                    <span class="name">dsg</span>
                     <span class="message">Hey there, I wanted to ask you something...</span>
                     <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
                   </a>
@@ -83,7 +83,7 @@
               </ul>
             </li>
             <li class="dropdown user-dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $user->first_name.' '.$user->last_name; ?><b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
                 <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge">7</span></a></li>

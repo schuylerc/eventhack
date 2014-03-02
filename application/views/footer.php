@@ -1,6 +1,6 @@
 
     <!-- JavaScript -->
-    <script src="/assets/js/jquery-1.10.2.js"></script>
+    <script src="/assets/js/jquery-2.1.0.min.js"></script>
     <script src="/assets/js/bootstrap.js"></script>
 
     <!-- Page Specific Plugins -->

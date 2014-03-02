@@ -32,7 +32,7 @@
 
               <div id="infoMessage"><?php echo $message;?></div>
 
-          <form class="form-signin" action="http://localhost:8888/auth/login" method="post" role="form">
+          <form class="form-signin" action="/auth/login" method="post" role="form">
             <h2 class="form-signin-heading">Please sign in</h2>
             <input type="email" name="identity" id="identity" class="form-control" placeholder="Email address" required autofocus>
             <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
