@@ -34,14 +34,16 @@ class Event_model extends CI_Model{
 		return $query->result_object();
 	}
 
-	public function add_new_event($eventName, $eventDate, $eventLocation, $eventDesc, $eEndDate)
+	public function add_new_event($eventName, $eventDate, $eventLocation, $eventDesc, $eEndDate, $address, $parking_location)
 	{
 		$data = array(
 			'event_name' => $eventName,
 			'start_time' => $eventDate,
 			'location' => $eventLocation,
 			'event_description' => $eventDesc,
-			'finish_time' => $eEndDate
+			'finish_time' => $eEndDate,
+			'address' => $address,
+			'parking_location' => $parking_location
 		 );
 		
 		$query = $this->db->insert('events', $data);

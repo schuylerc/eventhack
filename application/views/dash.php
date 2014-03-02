@@ -14,7 +14,7 @@
                                 url: '/dash/ajax_add_event',
                                 data: { EventName: $("#EventName").val(), EventDate: $("#EventDate").val(),
                                         EventLocation: $("#EventLocation").val(), EventDesc: $("#EventDesc").val(),
-                                        EventEndDate: $("#EventEndDate").val()
+                                        EventEndDate: $("#EventEndDate").val(), EventAddress: $('#EventAddress').val(), EventParking: $('#EventParking')
                                  },
                                 beforeSend:function(){
                                   // this is where we append a loading image
@@ -101,7 +101,7 @@
 
                           <!-- Text input-->
                           <div class="control-group">
-                            <label class="control-label" for="Event Location">Event Location</label>
+                            <label class="control-label" for="Event Location">Event Address</label>
                             <div class="controls">
                               <input id="EventLocation" name="EventLocation" type="text" placeholder="123 Main St. " class="input-medium">
                               <p class="help-block">Event Location</p>
@@ -110,9 +110,25 @@
 
                           <!-- Textarea -->
                           <div class="control-group">
-                            <label class="control-label" for="eventDesc.">eventDesc.</label>
+                            <label class="control-label" for="textinput">Event Description</label>
                             <div class="controls">                     
-                              <textarea id="EventDesc" name="EventDesc">Describe your Event</textarea>
+                              <textarea id="EventDesc" name="EventDesc" placeholder = "event description"></textarea>
+                            </div>
+                          </div>
+                          
+                          <!-- Textarea -->
+                          <div class="control-group">
+                            <label class="control-label" for="textinput">Event Parking</label>
+                            <div class="controls">                     
+                              <textarea id="EventParking" name="EventParking" placeholder = "Lot C"></textarea>
+                            </div>
+                          </div>
+                          
+                          <!-- Textarea -->
+                          <div class="control-group">
+                            <label class="control-label" for="textinput">Event Building Location</label>
+                            <div class="controls">                     
+                              <textarea id="EventAddress" name="EventAddress" placeholder = "The Hub Ballroom"></textarea>
                             </div>
                           </div>
 

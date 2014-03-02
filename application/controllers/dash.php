@@ -36,9 +36,10 @@ class Dash extends MY_Controller {
 		$eEndDate = $_POST['EventEndDate'];
 		$eLocation = $_POST['EventLocation'];
 		$eDesc = $_POST['EventDesc']; 
+		$address = $_POST['EventAddress'];
+		$parking_location = $_POST['EventParking'];
 
-
-		echo $this->event_model->add_new_event($eName, $eDate, $eLocation, $eDesc, $eEndDate);
+		echo $this->event_model->add_new_event($eName, $eDate, $eLocation, $eDesc, $eEndDate, $address, $parking_location);
 
 	}
 	
