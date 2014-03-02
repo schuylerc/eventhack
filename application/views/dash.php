@@ -20,6 +20,7 @@
 <!-- Form Name -->
 <legend>Create Event</legend>
 
+
 <!-- Text input-->
 <div class="control-group">
   <label class="control-label" for="Event Name">Event Name</label>
@@ -86,42 +87,19 @@
           </div>
         </div><!-- /.row -->
 
-        <div class="row">
+        <?php 
+  foreach ($event as $event_item) {
+  ?>
+  <div class="row">
           <div class="col-lg-12">
             <div class"event">
-            <h2>Event Name</h2> <h4> <strong>at</strong> @Location <strong>on</strong> Monday 01,01,2014</h4>
-            <p>Event Desciprtion</p>
-          </div>
-        </div>
+            <h2> <?php echo $event_item->event_name; ?> </h2>
+            <h4> <strong>at</strong> <?echo $event_item->location;?> <strong>on</strong> <?php echo $event_item->start_time;?> </h4>
+            <p> <?php echo $event_item->event_description; ?> </p>
+<?php              
+                
+  }
 
-        </div>
-
-         <div class="row">
-          <div class="col-lg-12">
-            <div class"event">
-            <h2>Event Name</h2> <h4> <strong>at</strong> @Location <strong>on</strong> Monday 01,01,2014</h4>
-            <p>Event Desciprtion</p>
-          </div>
-        </div>
-
-        </div>
-
-         <div class="row">
-          <div class="col-lg-12">
-            <div class"event">
-            <h2>Event Name</h2> <h4> <strong>at</strong> @Location <strong>on</strong> Monday 01,01,2014</h4>
-            <p>Event Desciprtion</p>
-          </div>
-        </div>
-
-        </div>
-
-         <div class="row">
-          <div class="col-lg-12">
-            <div class"event">
-            <h2>Event Name</h2> <h4> <strong>at</strong> @Location <strong>on</strong> Monday 01,01,2014</h4>
-            <p>Event Desciprtion</p>
-          </div>
-        </div>
-
+?>
+       
         </div>
