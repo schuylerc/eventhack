@@ -1,4 +1,5 @@
 <html>
+
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,15 +21,6 @@
 	href="/assets/css/event.css">
 	
 <!-- Javascript here -->
-	
-<script type= "text/javascript" src="myscripts.js"></script>
-
-<style>
-html, body, #map {
-  height: 100%;
-  margin: 0;
-}
-</style>
 
 </head>
 <body>
@@ -46,29 +38,41 @@ html, body, #map {
 	
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-what">
-		 <h2 id = "event-what-heading">What:</h2>
+		 <h2 id = "event-heading">What:</h2>
 		</div>
 	</div> <!--  includes wireless info and other misc info -->
 	
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-where">
-			<h2 id = "event-where-heading">Where:</h2>
+			<h2 id = "event-heading">Where:</h2>
+			<div class = "row-fluid">
+				<p class = "event-text">{1234 Street Drive, Fairfax, VA 20042}</p>
+				<p class = "event-text">Building: {Engineering Building 4021}</p>
+				<p class = "event-text">Parking: {Lot K}</p>
+			</div>
+			<span class = "col-lg-1"></span>
+			<div class = "row-fluid">
+					<span class = "col-lg-10">
+						<iframe width="100%" height="75%" src = "/dash/loadMap"></iframe>
+					</span>
+			</div>
+			<span class = "col-lg-1"></span>
 		</div>
+		
 	</div> <!-- includes parking info, campus map(google map api), floor plans -->
 	
 	<div class = "row-fuild">
 		<div class = "col-lg-12 event-when">
-			<h2 id = "event-when-heading">When:</h2>
+			<h2 id = "event-heading">When:</h2>
 		</div>
 		<div>
-			<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<div id="map"></div>
+
 		</div>
 	</div> <!-- include countdown timer,  -->
 	
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-additional-info">
-			<h2 id = "event-additional-info-heading">Additional Information:</h2>
+			<h2 id = "event-heading">Additional Information:</h2>
 		</div>
 	</div> <!--  some secondary information -->
 	

@@ -4,6 +4,40 @@
           <div class="col-lg-12">
             <h1>Dashboard <small>Here are all my events</small>  <button class="pull-right btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
   Create Event </button> </h1>
+    
+                          <script type="text/javascript">
+
+                            function newEvent1(){
+
+                            $.ajax({
+                                type: 'POST',
+                                url: '/dash/ajax_add_event',
+                                data: { EventName: $("#EventName").val(), EventDate: $("#EventDate").val(),
+                                        EventLocation: $("#EventLocation").val(), EventDesc: $("#EventDesc").val()
+                                 },
+                                beforeSend:function(){
+                                  // this is where we append a loading image
+                                  $('#eventStatus').html('<i class="glyphicon glyphicon-refresh"></i>&nbsp;Creating Event...');
+
+                                },
+                                success:function(data){
+                                  // successful request; do something with the data
+                                  $('#eventStatus').empty();
+                                  //print result here
+                                  $('#eventStatus').append('created successfully');
+                                  window.location = '/event/edit/' + data;
+                                
+                                },
+                                error:function(){
+                                  // failed request; give feedback to user
+                                  $('#eventStatus').append('An Error occured while creating this survey');
+                                }
+                                });
+                              }
+                          
+
+                          </script>
+
             <!-- Modal -->
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                   <div class="modal-dialog">
@@ -14,7 +48,7 @@
                       </div>
                       <div class="modal-body">
                         <h1>ALL OF THE THINGS!</h1>
-                          <form class="form-horizontal" action="/dash/ajax_add_event" method="post">
+                          <div class="form-horizontal">
                           <fieldset>
 
                           <!-- Form Name -->
@@ -60,17 +94,22 @@
                           <div class="control-group">
                             <label class="control-label" for="submit">Submit</label>
                             <div class="controls">
-                              <button id="submit" name="submit" class="btn btn-primary">Save</button>
+                              <button  onclick="newEvent1();" class="btn btn-primary">Save</button>
                             </div>
                           </div>
 
                           </fieldset>
-                          </form>
+                          </div>
+
+                          <div id="eventStatus"></div>
 
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button>
+
+
+
                       </div>
                     </div>
                   </div>
