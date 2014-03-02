@@ -40,7 +40,7 @@
 	</div>
 	<div class = "row-fluid">
 		<span class="col-lg-12">
-			<button type="button" class="btn btn-primary btn-lg">Register!</button>
+			<a href="/event/register"><button type="button" class="btn btn-primary btn-lg">Register!</button></a>
 		</span>
 	</div> 
 	
