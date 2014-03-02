@@ -29,8 +29,8 @@
 		<div class = "col-lg-12 event-where">
 			<h1 class = "event-heading">WHERE</h1>
 			<div class = "row-fluid">
-				<p class = "event-text"><?php echo $eDetail->location; ?></p>
-				<p class = "event-text">Building: <?php echo $eDetail->address; ?></p>
+				<p class = "event-text"><?php echo $eDetail->address; ?></p>
+				<p class = "event-text">Building: <?php echo $eDetail->location; ?></p>
 				<p class = "event-text">Parking: <?php echo $eDetail->parking_location; ?></p>
 			</div>
 			<div class = "col-lg-12-offset-1" style="height: 90%; width: 100%">
