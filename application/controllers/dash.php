@@ -21,9 +21,14 @@ class Dash extends MY_Controller {
 	
 	}
 	
-	public function loadMap($handle = NULL){
-		$data['eDetail'] = $this->event_model->get_event_details($handle);
-		$this->load->view('event/map', $data);
+	public function test(){
+		$this->beginView();
+		$this->load->view('event/view');
+		$this->endView();
+	}
+	
+	public function loadMap(){
+		$this->load->view('event/map');
 	}
 
 	public function ajax_add_event(){

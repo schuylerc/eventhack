@@ -44,7 +44,6 @@ class Event extends MY_Controller {
 		else{
 		//TODO - $data['event'] = $this->event_model->get_event($handle);
 		$data['eDetail'] = $this->event_model->get_event_details($handle);
-		$data['handle'] = $handle;
 		$this->load->view('event/view', $data);
 		}
 		$this->endView();

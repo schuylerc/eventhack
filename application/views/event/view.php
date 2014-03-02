@@ -34,7 +34,7 @@
 				<p class = "event-text">Parking: <?php echo $eDetail->parking_location; ?></p>
 			</div>
 			<div class = "col-lg-12-offset-1" style="height: 90%; width: 100%">
-				<iframe width="100%" height="75%" src = "/dash/loadMap/<?php echo $handle; ?>"></iframe>
+				<iframe width="100%" height="75%" src = "/dash/loadMap"></iframe>
 			</div>
 		</div>
 		
