@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Login to eventHack</title>
+    <title>Register</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
@@ -28,21 +28,19 @@
 
     <div class="container">
 
-            <h1>eventHack</h1>
+            <h1>Register for event</h1>
 
               <div id="infoMessage"><?php echo $message;?></div>
 
           <form class="form-signin" action="/auth/login" method="post" role="form">
-            <h2 class="form-signin-heading">Please sign in</h2>
-            <input type="email" name="identity" id="identity" class="form-control" placeholder="Email address" required autofocus><br>
-            <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
-            <label class="checkbox" style="text-align: left;">
-              <input type="checkbox" name="remember" id="remember" value="remember-me"> Remember me
-            </label>
-            <button class="btn btn-lg btn-primary btn-block" name="submit" value="login" type="submit">Sign in</button>
-          </form>
-<br><br>
-          <p><a href="forgot_password">Forgot your password?</a></p>
+            <h3 class="form-signin-heading">Please enter your name</h3>
+            <input type="text" name="identity" id="identity" class="form-control" placeholder="Name" required autofocus><br><h3 class="form-signin-heading">Please enter your name</h3>
+            <h3 class="form-signin-heading">Please enter your email</h3>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
+            <h3 class="form-signin-heading">Enter your phone number</h3>
+            <input type="text" name="number" id="number" class="form-control" placeholder="Phone" required>
+            <button class="btn btn-lg btn-primary btn-block" name="submit" value="login" type="submit">Register for event!</button>
+          </form>        
 
         </div> <!-- /container -->
 
