@@ -14,58 +14,58 @@
                       </div>
                       <div class="modal-body">
                         <h1>ALL OF THE THINGS!</h1>
-                          <form class="form-horizontal">
-<fieldset>
+                          <form class="form-horizontal" action="/dash/ajax_add_event" method="post">
+                          <fieldset>
 
-<!-- Form Name -->
-<legend>Create Event</legend>
+                          <!-- Form Name -->
+                          <legend>Create Event</legend>
 
 
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="Event Name">Event Name</label>
-  <div class="controls">
-    <input id="Event Name" name="Event Name" type="text" placeholder="Event Name" class="input-medium" required="">
-    <p class="help-block">Name your Event</p>
-  </div>
-</div>
+                          <!-- Text input-->
+                          <div class="control-group">
+                            <label class="control-label" for="Event Name">Event Name</label>
+                            <div class="controls">
+                              <input id="EventName" name="EventName" type="text" placeholder="Event Name" class="input-medium" required="">
+                              <p class="help-block">Name your Event</p>
+                            </div>
+                          </div>
 
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="textinput">Event Date</label>
-  <div class="controls">
-    <input id="textinput" name="textinput" type="text" placeholder="mm/dd/yyyy" class="input-xlarge" required="">
-    <p class="help-block">Event Date</p>
-  </div>
-</div>
+                          <!-- Text input-->
+                          <div class="control-group">
+                            <label class="control-label" for="textinput">Event Date</label>
+                            <div class="controls">
+                              <input id="EventDate" name="EventDate" type="date" placeholder="mm/dd/yyyy" class="input-xlarge" required="">
+                              <p class="help-block">Event Date</p>
+                            </div>
+                          </div>
 
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="Event Location">Event Location</label>
-  <div class="controls">
-    <input id="Event Location" name="Event Location" type="text" placeholder="123 Main St. " class="input-medium">
-    <p class="help-block">Event Location</p>
-  </div>
-</div>
+                          <!-- Text input-->
+                          <div class="control-group">
+                            <label class="control-label" for="Event Location">Event Location</label>
+                            <div class="controls">
+                              <input id="EventLocation" name="EventLocation" type="text" placeholder="123 Main St. " class="input-medium">
+                              <p class="help-block">Event Location</p>
+                            </div>
+                          </div>
 
-<!-- Textarea -->
-<div class="control-group">
-  <label class="control-label" for="eventDesc.">eventDesc.</label>
-  <div class="controls">                     
-    <textarea id="eventDesc." name="eventDesc.">Describe your Event</textarea>
-  </div>
-</div>
+                          <!-- Textarea -->
+                          <div class="control-group">
+                            <label class="control-label" for="eventDesc.">eventDesc.</label>
+                            <div class="controls">                     
+                              <textarea id="EventDesc" name="EventDesc">Describe your Event</textarea>
+                            </div>
+                          </div>
 
-<!-- Button -->
-<div class="control-group">
-  <label class="control-label" for="submit">Submit</label>
-  <div class="controls">
-    <button id="submit" name="submit" class="btn btn-primary">Save</button>
-  </div>
-</div>
+                          <!-- Button -->
+                          <div class="control-group">
+                            <label class="control-label" for="submit">Submit</label>
+                            <div class="controls">
+                              <button id="submit" name="submit" class="btn btn-primary">Save</button>
+                            </div>
+                          </div>
 
-</fieldset>
-</form>
+                          </fieldset>
+                          </form>
 
                       </div>
                       <div class="modal-footer">

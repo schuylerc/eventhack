@@ -26,4 +26,14 @@ class Dash extends CI_Controller {
 	
 	}
 
+	public function ajax_add_event(){
+		$eName = $_POST['EventName'];
+		$eDate = $_POST['EventDate'];
+		$eLocation = $_POST['EventLocation'];
+		$eDesc = $_POST['EventDesc']; 
+
+		$this->event_model->add_new_event($eName, $eDate, $eLocation, $eDesc);
+
+	}
+
 }
