@@ -38,19 +38,22 @@
 	
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-what">
-		 <h2 id = "event-what-heading">What:</h2>
+		 <h2 id = "event-heading">What:</h2>
 		</div>
 	</div> <!--  includes wireless info and other misc info -->
 	
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-where">
-			<h2 id = "event-where-heading">Where:</h2>
+			<h2 id = "event-heading">Where:</h2>
 			<div class = "row-fluid">
-				<span class = "col-lg-1"></span>
-					<span style = "padding:10px;" class = "col-lg-10">
-						<iframe width="100%" height="80%" src = "/dash/loadMap"></iframe>
+				<p class = "event-text">{1234 Street Drive, Fairfax, VA 20042}</p>
+				<p class = "event-text">Building: {Engineering Building 4021}</p>
+				<p class = "event-text">Parking: {Lot K}</p>
+			</div>
+			<div class = "row-fluid">
+					<span class = "col-lg-12">
+						<iframe width="100%" height="75%" src = "/dash/loadMap"></iframe>
 					</span>
-				<span class = "col-lg-1"></span>
 			</div>
 		</div>
 		
@@ -58,7 +61,7 @@
 	
 	<div class = "row-fuild">
 		<div class = "col-lg-12 event-when">
-			<h2 id = "event-when-heading">When:</h2>
+			<h2 id = "event-heading">When:</h2>
 		</div>
 		<div>
 
@@ -67,7 +70,7 @@
 	
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-additional-info">
-			<h2 id = "event-additional-info-heading">Additional Information:</h2>
+			<h2 id = "event-heading">Additional Information:</h2>
 		</div>
 	</div> <!--  some secondary information -->
 	
