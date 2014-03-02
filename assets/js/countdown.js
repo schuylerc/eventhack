@@ -11,15 +11,18 @@
 
 // Usage:
 // var test = new Countdown({time:15});
-
+var CountdownrangeHi = "MINUTES";
 var CountdownImageFolder = "images/";
 var CountdownImageBasename = "flipper";
 var CountdownImageExt = "png";
 var CountdownImagePhysicalWidth = 41;
 var CountdownImagePhysicalHeight = 60;
 
+
+
 var CountdownWidth = 500;
 var CountdownHeight = 100;
+
 
 var CountdownLabels = {
 	second 	: "SECONDS",
