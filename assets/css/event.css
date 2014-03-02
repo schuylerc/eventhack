@@ -12,7 +12,7 @@
 }
 
 .event-where{
-	height:50%;
+	height:75%;
 	background-color:#dff0d8;
 	font-color:black;
 	font-size:20px;
@@ -20,6 +20,11 @@
 
 #event-where-heading{
 	font-weight:100;
+}
+
+#event-where-text{
+	font-weight:200;
+	font-size: 16px;
 }
 
 .event-when{
