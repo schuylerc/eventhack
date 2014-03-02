@@ -1,8 +1,14 @@
-      <div id="page-wrapper" style="background-color:#ffffff">
 
+      <div id="page-wrapper" style="background-color:#ffffff">
+        
+      <link rel="stylesheet" type="text/css" href="/assets/css/morris-0.4.3.min.css">
+
+      <div id="page-wrapper" style="background-color:#dff0d8;">
+
+		
         <div class="row">
           <div class="col-lg-12">
-            <h1 style="color:#303030;"><i class="fa fa-dashboard"></i> Dashboard  <button class="pull-right btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+
   Create Event </button> </h1><br>
     
                           <script type="text/javascript">
@@ -184,7 +190,7 @@
   ?>
   
           <div class="col-lg-6">
-            <div class="event">
+            <div class="event" style="border: 1px solid black;">
             <h2><a href='/event/view/<?php echo $event_item->handle; ?>'> <?php echo $event_item->event_name; ?> </a></h2>
             <h4> <strong>at</strong> <?echo $event_item->location;?> <strong>on</strong> <?php echo $event_item->start_time;?> </h4>
             <p> <?php echo $event_item->event_description; ?> </p>
@@ -196,6 +202,6 @@
 
 ?>
        
-</div> <!-- End Events Row --!>
+</div>
 
 

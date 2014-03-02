@@ -15,31 +15,18 @@
 
 	<div class="row-fluid">
 		<span class="col-lg-12">
-			<h1 class="event-heading"><?php echo $eDetail->event_name; ?></h1>
-			<button type="button" class="btn btn-primary btn-lg">Register!</button>
-		</span>
-		<span class="col-lg-6">
-			<h2 class = "event-heading">What:</h2>
-			<p class = "event-text"><?php echo $eDetail->event_description; ?></p>
-		</span>
-		<span class="col-lg-6">
-			<h2 class = "event-heading">When:</h2>
-			<p class = "event-date-text"><?php echo date("l, F jS, Y",strtotime($eDetail->start_time)); ?></p>
-			<p class = "event-date-text">at <?php echo date("h:iA",strtotime($eDetail->start_time)); ?></p>
-			<div aling="center">	
-				<script>
-					var timeToCD = <?php echo json_encode((strtotime($eDetail->start_time)) - time()); ?>;
-					var myCountdown1 = new Countdown({time:timeToCD,rangeHi:"day"});
-				</script>
-			</div>
-
+			<h1 class = "event-heading"><?php echo $eDetail->event_name; ?></h1>
 		</span>
 	</div>
-	
-	
+	<div class = "row-fluid">
+		<span align = "center" class="col-lg-12">
+			<button type="button" class="btn btn-primary btn-lg">Register!</button>
+		</span>
+	</div> 
+	<br><br>
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-where">
-			<h2 class = "event-heading">Where:</h2>
+			<h1 class = "event-heading">WHERE</h1>
 			<div class = "row-fluid">
 				<p class = "event-text"><?php echo $eDetail->location; ?></p>
 				<p class = "event-text">Building: <?php echo $eDetail->address; ?></p>
@@ -54,7 +41,7 @@
 	
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-when">
-			<h2 class = "event-heading">When:</h2>
+			<h1 class = "event-heading">WHEN</h1>
 			<p class = "event-date-text"><?php echo date("l, F jS, Y",strtotime($eDetail->start_time)); ?></p>
 			<p class = "event-date-text">at <?php echo date("h:iA",strtotime($eDetail->start_time)); ?></p>
 			<div align = "center" class = "col-lg-12">		
@@ -69,7 +56,7 @@
 	
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-what">
-			 <h2 class = "event-heading">What:</h2>
+			 <h1 class = "event-heading">WHAT</h1>
 			<div class = "row-fluid">
 					<div class = "col-lg-2"></div>
 				 <div class = "col-lg-8">

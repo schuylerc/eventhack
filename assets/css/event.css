@@ -15,9 +15,9 @@
 }
 
 .event-heading{
-	font-weight:100;
+	font-weight:200;
 	text-align: center;
-	font-weight: bold;
+	text-size:30px;
 }
 
 .event-what{
@@ -41,11 +41,5 @@
 	font-size:20px;
 }
 
-.event-additional-info{
-	height:60%;
-	background-color:#dff0d8;
-	font-color:black;
-	font-size:20px;
-}
 
 	
