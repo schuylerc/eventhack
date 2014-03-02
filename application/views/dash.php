@@ -145,10 +145,6 @@
             <ol class="breadcrumb">
               <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
             </ol>
-            <div class="alert alert-success alert-dismissable" style="text-align:center;">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-              Welcome to <b>eventHack!</b>
-            </div>
           </div>
         </div><!-- /.row -->
 
