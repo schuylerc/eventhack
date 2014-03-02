@@ -133,7 +133,7 @@
   <div class="row">
           <div class="col-lg-12">
             <div class"event">
-            <h2> <?php echo $event_item->event_name; ?> </h2>
+            <h2><a href='/event/view/<?php echo $event_item->handle; ?>'> <?php echo $event_item->event_name; ?> </a></h2>
             <h4> <strong>at</strong> <?echo $event_item->location;?> <strong>on</strong> <?php echo $event_item->start_time;?> </h4>
             <p> <?php echo $event_item->event_description; ?> </p>
 <?php              
