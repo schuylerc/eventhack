@@ -46,7 +46,45 @@
             <input type="text" name="email" id="email" class="form-control" placeholder="Email" value="<?php echo $user->email; ?>" required>
           </h3>
             <button class="btn btn-lg btn-primary btn-block" name="submit" value="login" type="submit">Register for event!</button>
-          </form>        
+          </form> 
+
+<?php 
+$url = 'http://sendgrid.com/';
+$user1 = 'schasegleason';
+$pass = 'password123';
+
+$params = array(
+    'api_user'  => $user1,
+    'api_key'   => $pass,
+    'to'        => $user->email,
+    'subject'   => 'Thank you for registering for the event',
+    'html'      => 'Other important info',
+    'text'      => 'testing body',
+    'from'      => 'event@sendgrid.com'
+  );
+
+
+$request =  $url.'api/mail.send.json';
+
+// Generate curl request
+$session = curl_init($request);
+// Tell curl to use HTTP POST
+curl_setopt ($session, CURLOPT_POST, true);
+// Tell curl that this is the body of the POST
+curl_setopt ($session, CURLOPT_POSTFIELDS, $params);
+// Tell curl not to return headers, but do return the response
+curl_setopt($session, CURLOPT_HEADER, false);
+curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
+
+// obtain response
+$response = curl_exec($session);
+curl_close($session);
+
+// print everything out
+
+
+?>
+
 
         </div> <!-- /container -->
 
