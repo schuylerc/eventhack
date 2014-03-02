@@ -14,7 +14,7 @@
                                 url: '/dash/ajax_add_event',
                                 data: { EventName: $("#EventName").val(), EventDate: $("#EventDate").val(),
                                         EventLocation: $("#EventLocation").val(), EventDesc: $("#EventDesc").val(),
-                                        EventEndDate: $("#EventEndDate").val(), EventAddress: $('#EventAddress').val(), EventParking: $('#EventParking')
+                                        EventEndDate: $("#EventEndDate").val(), EventAddress: $('#EventAddress').val(), EventParking: $('#EventParking').val()
                                  },
                                 beforeSend:function(){
                                   // this is where we append a loading image
