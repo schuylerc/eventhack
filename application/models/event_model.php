@@ -21,4 +21,30 @@ class Event_model extends CI_Model{
 		$query = $this->db->get_where('events', array('handle' => $handle));
 		return $query->result_object();
 	}
+	
+	/*
+	 * get events list
+	 * 
+	 * @return events list object
+	 * @access public
+	 * 
+	 */
+	public function get_events_list(){
+		$query = $this->db->get_where('events');
+		return $query->result_object();
+	}
+
+	public function add_new_event($eventName, $eventDate, $eventLocation, $eventDesc)
+	{
+		$data = array(
+			'event_name' => $eventName,
+			'start_time' => $eventDate,
+			'location' => $eventLocation,
+			'event_description' => $eventDesc
+		 );
+		
+		$query = $this->db->insert('events', $data);
+
+
+	}
 }

@@ -17,7 +17,7 @@
     <link href="/assets/css/sb-admin.css" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <!-- Page Specific CSS -->
-    <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+     <link href="/assets/css/cover.css" rel="stylesheet">
   </head>
 
   <body>
@@ -34,14 +34,14 @@
 
           <form class="form-signin" action="/auth/login" method="post" role="form">
             <h2 class="form-signin-heading">Please sign in</h2>
-            <input type="email" name="identity" id="identity" class="form-control" placeholder="Email address" required autofocus>
+            <input type="email" name="identity" id="identity" class="form-control" placeholder="Email address" required autofocus><br>
             <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
-            <label class="checkbox">
+            <label class="checkbox" style="text-align: left;">
               <input type="checkbox" name="remember" id="remember" value="remember-me"> Remember me
             </label>
             <button class="btn btn-lg btn-primary btn-block" name="submit" value="login" type="submit">Sign in</button>
           </form>
-
+<br><br>
           <p><a href="forgot_password">Forgot your password?</a></p>
 
         </div> <!-- /container -->

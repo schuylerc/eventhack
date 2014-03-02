@@ -5,6 +5,8 @@ class Dash extends CI_Controller {
 	{
 		parent::__construct();
 
+		$this->load->model('event_model');
+
 		//$this->checkLogin();
 	}
 	
@@ -17,8 +19,9 @@ class Dash extends CI_Controller {
 		//get user info
 
         $data['user'] = $this->ion_auth->user()->row();
+        $data['event'] = $this->event_model->get_events_list();
 		$this->load->view('header', $data);
-		$this->load->view('dash');
+		$this->load->view('dash', $data);
 		$this->load->view('footer');
 	
 	}
@@ -27,7 +30,18 @@ class Dash extends CI_Controller {
 		$this->load->view('event/view');
 	}
 	
-	public function testMap(){
+	public function loadMap(){
 		$this->load->view('event/map');
 	}
+
+	public function ajax_add_event(){
+		$eName = $_POST['EventName'];
+		$eDate = $_POST['EventDate'];
+		$eLocation = $_POST['EventLocation'];
+		$eDesc = $_POST['EventDesc']; 
+
+		$this->event_model->add_new_event($eName, $eDate, $eLocation, $eDesc);
+
+	}
+
 }
