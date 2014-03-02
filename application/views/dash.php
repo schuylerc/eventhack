@@ -152,6 +152,24 @@
           </div>
         </div><!-- /.row -->
 
+<div class="row">
+<div class="col-lg-12">
+  <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
+        <script>
+            $(document).ready(function() {
+                createStoryJS({
+                    type:       'timeline',
+                    width:      '800',
+                    height:     '600',
+                    source:     '/dash/ajax_timeline_json',
+                    embed_id:   'my-timeline'
+                });
+            });
+        </script>
+        <div id="my-timeline"></div>
+</div>
+</div>
+
         <?php 
   foreach ($event as $event_item) {
   ?>
