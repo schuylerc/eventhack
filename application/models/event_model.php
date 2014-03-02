@@ -74,10 +74,11 @@ class Event_model extends CI_Model{
 	
 	public function generate_event_json(){
 		$query = $this->db->get_where('events');
-		$toencode = array();
+		$datetoencode = array();
 		foreach ($query->result_object() as $item){
 			$toencode[] = array('startDate' => date("Y,m,d", strtotime($item->start_time)), 'endDate' => date("Y,m,d", strtotime($item->finish_time)), 'headline' => $item->event_name);
 		}
+		$toencode = array('timeline' => array('type' => 'default', 'date' => $toencode));
 		return json_encode($toencode);
 	}
 
