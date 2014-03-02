@@ -82,5 +82,11 @@ class Event_model extends CI_Model{
 		$toencode = array('timeline' => array('type' => 'default', 'date' => $toencode));
 		return json_encode($toencode);
 	}
+	
+	public function send_mail($address, $subject, $body){
+		include '/assets/sendgrid-php/SendGrid_loader.php';
+		
+		//TODO - code to send an e-mail using the paramaters passed in
+	}
 
 }
