@@ -25,15 +25,6 @@
 	</div> 
 	
 	<div class = "row-fluid">
-		<div class = "col-lg-12 event-what">
-		 <h2 class = "event-heading">What:</h2>
-			 <div class = "col-lg-6-offset-3" style="padding:10px;">
-			 	<p class = "event-text"><?php echo $eDetail->event_description; ?></p>
-			 </div>
-		</div>
-	</div> <!--  includes wireless info and other misc info -->
-	
-	<div class = "row-fluid">
 		<div class = "col-lg-12 event-where">
 			<h2 class = "event-heading">Where:</h2>
 			<div class = "row-fluid">
@@ -62,11 +53,18 @@
 		</div>
 	</div>
 	
+	
 	<div class = "row-fluid">
-		<div class = "col-lg-12 event-additional-info">
-			<h2 class = "event-heading">Additional Information:</h2>
-
+		<div class = "col-lg-12 event-what">
+			 <h2 class = "event-heading">What:</h2>
+			<div class = "row-fluid">
+					<div class = "col-lg-2"></div>
+				 <div class = "col-lg-8">
+				 	<p class = "event-text"><?php echo $eDetail->event_description; ?></p>
+				 </div>
+				 <div class = "col-lg-2"></div>
+			</div>
 		</div>
-	</div> <!--  some secondary information -->
+	</div> <!--  includes wireless info and other misc info -->
 	
 </body>
