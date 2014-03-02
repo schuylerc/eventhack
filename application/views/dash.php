@@ -188,7 +188,7 @@
             <div class="event">
 
             <h2><a href='/event/view/<?php echo $event_item->handle; ?>'> <?php echo $event_item->event_name; ?> </a></h2>
-            <h4> <strong>at</strong> <?echo $event_item->location;?> <strong>on</strong> <?php echo $event_item->start_time;?> </h4>
+            <h4> <strong>at</strong> <?echo $event_item->location;?> <strong>on</strong> <?php echo date("l, F jS, Y",strtotime($event_item->start_time)); ?></h4>
             <p> <?php echo $event_item->event_description; ?> </p>
           </div>
         </div>
@@ -198,7 +198,7 @@
 
 ?>
        
-</div> <!-- End Events Row --!>
+</div>
 
 
 
