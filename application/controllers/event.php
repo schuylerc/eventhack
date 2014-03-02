@@ -16,6 +16,7 @@ class Event extends CI_Controller {
 	
 	}
 	public function view($handle = NULL){
+		//this will load the event layout when the stuff below is figured out
 		if(!isset($handle)){
 			//error message because event wasn't passed in
 			$this->load->view('event/notfound');

@@ -46,10 +46,9 @@
 		<div class = "col-lg-12 event-where">
 			<h2 id = "event-where-heading">Where:</h2>
 			<div class = "row-fluid">
-				<div align = "center"><p id = "event-where-text">1234 Street Drive<br>Fairfax, VA 22042</p><br></div>
 				<span class = "col-lg-1"></span>
-					<span align = "center" class = "col-lg-10">
-						<iframe width="100%" height="100%" src = "/dash/testMap"></iframe>
+					<span style = "padding:10px;" class = "col-lg-10">
+						<iframe width="100%" height="80%" src = "/dash/loadMap"></iframe>
 					</span>
 				<span class = "col-lg-1"></span>
 			</div>
