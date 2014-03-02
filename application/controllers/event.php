@@ -4,6 +4,7 @@ class Event extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('event_model');
 		//$this->checkLogin();
 	}
 	
@@ -23,7 +24,8 @@ class Event extends CI_Controller {
 		}
 		else{
 		//TODO - $data['event'] = $this->event_model->get_event($handle);
-		$this->load->view('event/view');
+		$data['eDetail'] = $this->event_model->get_event_details($handle);
+		$this->load->view('event/view', $data);
 		}
 	}
 }

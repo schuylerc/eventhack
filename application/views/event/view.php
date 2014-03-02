@@ -27,7 +27,7 @@
 
 	<div class="row-fluid">
 		<span class="col-lg-12">
-			<h1>{Event Name}</h1>
+			<h1><?php echo $eDetail->event_name; ?></h1>
 		</span>
 	</div>
 	<div class = "row-fluid">
@@ -46,6 +46,7 @@
 		<div class = "col-lg-12 event-where">
 			<h2 id = "event-heading">Where:</h2>
 			<div class = "row-fluid">
+				<?php echo $eDetail->location; ?>
 				<p class = "event-text">{1234 Street Drive, Fairfax, VA 20042}</p>
 				<p class = "event-text">Building: {Engineering Building 4021}</p>
 				<p class = "event-text">Parking: {Lot K}</p>
@@ -64,6 +65,7 @@
 	<div class = "row-fuild">
 		<div class = "col-lg-12 event-when">
 			<h2 id = "event-heading">When:</h2>
+			<?php echo $eDetail->start_time; ?>
 		</div>
 		<div>
 
@@ -73,6 +75,7 @@
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-additional-info">
 			<h2 id = "event-heading">Additional Information:</h2>
+			<?php echo $eDetail->event_description; ?>
 		</div>
 	</div> <!--  some secondary information -->
 	

@@ -50,8 +50,27 @@ class Event_model extends CI_Model{
 	}
 	
 	public function generate_handle($event_id){
-		return hash ("md5", $event_id);
+		$hash = hash ("md5", $event_id);
+		$data = array(
+               'handle' => $hash
+            );
+
+		$this->db->where('id', $event_id);
+		$this->db->update('events', $data);
+
+		return $hash;
 	}
+
+
+	public function get_event_details($handle){
+		
+		$query = $this->db->get_where('events', array('handle' => $handle));
+		$toreturn = $query->result_object();
+		return $toreturn[0];
+	}
+
+
+
 	
 	public function generate_event_json(){
 		$query = $this->db->get_where('events');
@@ -61,4 +80,5 @@ class Event_model extends CI_Model{
 		}
 		return json_encode($toencode);
 	}
+
 }
