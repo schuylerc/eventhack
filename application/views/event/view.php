@@ -48,7 +48,7 @@
 			<div align = "center" class = "col-lg-12">		
 				<script>
 					var timeToCD = <?php echo json_encode((strtotime($eDetail->start_time)) - time()); ?>;
-					var myCountdown1 = new Countdown({time:timeToCD});
+					var myCountdown1 = new Countdown({time:timeToCD,rangeHi:"day"});
 				</script>
 			</div>
 		</div>
