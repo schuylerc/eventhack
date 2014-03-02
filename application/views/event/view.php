@@ -17,7 +17,7 @@
 		<span class="col-lg-12">
 			<h1 class = "event-heading"><?php echo $eDetail->event_name; ?>
 				<br/> <br/>
-				<button type="button" class="btn btn-primary btn-lg">Register!</button> 
+				<a href="/event/register/<?php echo $eDetail->handle; ?>">  <button type="button" class="btn btn-primary btn-lg">Register!</button> </a>
 			</h1>
 
 			

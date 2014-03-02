@@ -29,16 +29,22 @@
     <div class="container">
 
             <h1>Register for event</h1>
-
-              <div id="infoMessage"><?php echo $message;?></div>
+            <h4>Verify your informataion for this event</h4>
+              <p>You are registering for <strong><?php echo $eDetail->event_name;?></strong> @ <strong><?php echo $eDetail->location;?></strong> on <strong><?php echo $eDetail->start_time;?> </strong> </p>
 
           <form class="form-signin" action="/auth/login" method="post" role="form">
-            <h3 class="form-signin-heading">Please enter your name</h3>
-            <input type="text" name="identity" id="identity" class="form-control" placeholder="Name" required autofocus><br><h3 class="form-signin-heading">Please enter your name</h3>
-            <h3 class="form-signin-heading">Please enter your email</h3>
-            <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
-            <h3 class="form-signin-heading">Enter your phone number</h3>
-            <input type="text" name="number" id="number" class="form-control" placeholder="Phone" required>
+            <h3 class="form-signin-heading" style="text-align:left;">First name:
+            <input type="text" name="identity" id="identity" class="form-control" placeholder="Fname" value="<?php echo $user->first_name; ?>" required autofocus><br>
+          </h3>
+            <h3 class="form-signin-heading" style="text-align:left;">Last name:
+            <input type="text" name="identity" id="identity" class="form-control" placeholder="Lname" value="<?php echo $user->last_name; ?>" required autofocus><br>
+          </h3>
+            <h3 class="form-signin-heading" style="text-align:left;">Phone number:
+            <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone" value="<?php echo $user->phone; ?>" required>
+          </h3>
+           <h3 class="form-signin-heading" style="text-align:left;">Email:
+            <input type="text" name="email" id="email" class="form-control" placeholder="Email" value="<?php echo $user->email; ?>" required>
+          </h3>
             <button class="btn btn-lg btn-primary btn-block" name="submit" value="login" type="submit">Register for event!</button>
           </form>        
 

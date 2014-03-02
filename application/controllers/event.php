@@ -14,9 +14,27 @@ class Event extends MY_Controller {
 		//get vars
 		//$this->load->view('connect/home');
 		//$this->endView();
-	
 	}
+
+	public function register($handle = NULL){
+		$this->checkLogin();
+		$this->beginView();
+		//this will load the event layout when the stuff below is figured out
+		if(!isset($handle)){
+			//error message because event wasn't passed in
+			$this->load->view('event/notfound');
+		}
+		else{
+		//TODO - $data['event'] = $this->event_model->get_event($handle);
+		$data['eDetail'] = $this->event_model->get_event_details($handle);
+		$this->load->view('event/register', $data);
+		}
+		$this->endView();
+
+	}
+
 	public function view($handle = NULL){
+		$this->checkLogin();
 		$this->beginView();
 		//this will load the event layout when the stuff below is figured out
 		if(!isset($handle)){
@@ -33,6 +51,7 @@ class Event extends MY_Controller {
 	}
 
 	public function edit($handle = NULL){
+		$this->checkLogin();
 		$this->beginView();
 		//this will load the event layout when the stuff below is figured out
 		if(!isset($handle)){
