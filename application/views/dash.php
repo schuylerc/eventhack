@@ -1,8 +1,8 @@
-      <div id="page-wrapper" style="background-color:#9C9C9C;">
+      <div id="page-wrapper" style="background-color:#ffffff">
 
         <div class="row">
           <div class="col-lg-12">
-            <h1 style="color:#ffffff;"><i class="fa fa-dashboard"></i> Dashboard  <button class="pull-right btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+            <h1 style="color:#303030;"><i class="fa fa-dashboard"></i> Dashboard  <button class="pull-right btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
   Create Event </button> </h1><br>
     
                           <script type="text/javascript">
