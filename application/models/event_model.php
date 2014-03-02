@@ -52,4 +52,9 @@ class Event_model extends CI_Model{
 	public function generate_handle($event_id){
 		return hash ("md5", $event_id);
 	}
+	
+	public function generate_event_json(){
+		$query = $this->db->get_where('events');
+		return json_encode($query->result_array());
+	}
 }
