@@ -24,7 +24,7 @@ class Auth extends MY_Controller {
 	//redirect if needed, otherwise display the user list
 	function index()
 	{
-
+		$this->beginView();
 		if (!$this->ion_auth->logged_in())
 		{
 			//redirect them to the login page
@@ -49,12 +49,32 @@ class Auth extends MY_Controller {
 
 			$this->_render_page('auth/index', $this->data);
 		}
+		$this->endView();
 	}
 
 	//log the user in
 	function login()
 	{
+
+
 		$this->data['title'] = "Login";
+		
+		//If the user is already logged in, send them on
+		if ($this->ion_auth->logged_in())
+		{
+			//see if they had any prior objectives
+			$prev_uri = explode("auth/login", uri_string());
+			$next_loc = $prev_uri[1];
+			//redirect them back to the home page if not
+			//if no next location make it the dash
+			if($next_loc==null){
+				redirect('/dash/', 'refresh');
+			}
+			else{
+				redirect('/'.$next_loc, 'refresh');
+			}
+			//otherwise
+		}
 
 		//validate form input
 		$this->form_validation->set_rules('identity', 'Identity', 'required');
@@ -99,6 +119,7 @@ class Auth extends MY_Controller {
 
 			$this->_render_page('auth/login', $this->data);
 		}
+
 	}
 
 	//log the user out
@@ -117,6 +138,7 @@ class Auth extends MY_Controller {
 	//change password
 	function change_password()
 	{
+		$this->beginView();
 		$this->form_validation->set_rules('old', $this->lang->line('change_password_validation_old_password_label'), 'required');
 		$this->form_validation->set_rules('new', $this->lang->line('change_password_validation_new_password_label'), 'required|min_length[' . $this->config->item('min_password_length', 'ion_auth') . ']|max_length[' . $this->config->item('max_password_length', 'ion_auth') . ']|matches[new_confirm]');
 		$this->form_validation->set_rules('new_confirm', $this->lang->line('change_password_validation_new_password_confirm_label'), 'required');
@@ -180,11 +202,13 @@ class Auth extends MY_Controller {
 				redirect('auth/change_password', 'refresh');
 			}
 		}
+		$this->endView();
 	}
 
 	//forgot password
 	function forgot_password()
 	{
+		$this->beginView();
 		$this->form_validation->set_rules('email', $this->lang->line('forgot_password_validation_email_label'), 'required');
 		if ($this->form_validation->run() == false)
 		{
@@ -230,6 +254,7 @@ class Auth extends MY_Controller {
 				redirect("auth/forgot_password", 'refresh');
 			}
 		}
+		$this->endView();
 	}
 
 	//reset password - final step for forgotten password
@@ -392,6 +417,7 @@ class Auth extends MY_Controller {
 	//create a new user
 	function create_user()
 	{
+		$this->beginView();
 		$this->data['title'] = "Create User";
 
 		if (!$this->ion_auth->logged_in() || !$this->ion_auth->is_admin())
@@ -479,11 +505,13 @@ class Auth extends MY_Controller {
 
 			$this->_render_page('auth/create_user', $this->data);
 		}
+		$this->endView();
 	}
 
 	//edit a user
 	function edit_user($id)
 	{
+		$this->beginView();
 		$this->data['title'] = "Edit User";
 
 		if (!$this->ion_auth->logged_in() || (!$this->ion_auth->is_admin() && !($this->ion_auth->user()->row()->id == $id)))
@@ -604,11 +632,13 @@ class Auth extends MY_Controller {
 		);
 
 		$this->_render_page('auth/edit_user', $this->data);
+		$this->endView();
 	}
 
 	// create a new group
 	function create_group()
 	{
+		$this->beginView();
 		$this->data['title'] = $this->lang->line('create_group_title');
 
 		if (!$this->ion_auth->logged_in() || !$this->ion_auth->is_admin())
@@ -652,11 +682,13 @@ class Auth extends MY_Controller {
 
 			$this->_render_page('auth/create_group', $this->data);
 		}
+		$this->endView();
 	}
 
 	//edit a group
 	function edit_group($id)
 	{
+		$this->beginView();
 		// bail if no group id given
 		if(!$id || empty($id))
 		{
@@ -714,6 +746,7 @@ class Auth extends MY_Controller {
 		);
 
 		$this->_render_page('auth/edit_group', $this->data);
+		$this->endView();
 	}
 
 

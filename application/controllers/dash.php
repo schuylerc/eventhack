@@ -11,10 +11,12 @@ class Dash extends MY_Controller {
 	}
 	
 	public function index(){
+		$this->beginView();
 
         $data['event'] = $this->event_model->get_events_list();
 		$this->load->view('dash', $data);
 
+		$this->endView();
 	
 	}
 	
