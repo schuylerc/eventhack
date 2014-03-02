@@ -31,6 +31,7 @@
                                 error:function(){
                                   // failed request; give feedback to user
                                   $('#eventStatus').append('An Error occured while creating this survey');
+                                  $('#eventStatus').append(data);
                                 }
                                 });
                               }
