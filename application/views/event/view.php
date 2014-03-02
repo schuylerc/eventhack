@@ -39,6 +39,7 @@
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-what">
 		 <h2 id = "event-heading">What:</h2>
+		 <?php echo $eDetail->event_description; ?>
 		</div>
 	</div> <!--  includes wireless info and other misc info -->
 	
@@ -75,7 +76,7 @@
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-additional-info">
 			<h2 id = "event-heading">Additional Information:</h2>
-			<?php echo $eDetail->event_description; ?>
+
 		</div>
 	</div> <!--  some secondary information -->
 	
