@@ -1,9 +1,9 @@
-      <div id="page-wrapper">
+      <div id="page-wrapper" style="background-color:#9C9C9C;">
 
         <div class="row">
           <div class="col-lg-12">
-            <h1>Dashboard <small>Here are all my events</small>  <button class="pull-right btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
-  Create Event </button> </h1>
+            <h1 style="color:#ffffff;"><i class="fa fa-dashboard"></i> Dashboard  <button class="pull-right btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+  Create Event </button> </h1><br>
     
                           <script type="text/javascript">
 
@@ -49,12 +49,12 @@
                         <h4 class="modal-title" id="myModalLabel">Create your event</h4>
                       </div>
                       <div class="modal-body">
-                        <h1>ALL OF THE THINGS!</h1>
+                        
                           <div class="form-horizontal">
                           <fieldset>
 
                           <!-- Form Name -->
-                          <legend>Create Event</legend>
+                          
 
 
                           <!-- Text input-->
@@ -62,7 +62,7 @@
                             <label class="control-label" for="Event Name">Event Name</label>
                             <div class="controls">
                               <input id="EventName" name="EventName" type="text" placeholder="Event Name" class="input-medium" required="">
-                              <p class="help-block">Name your Event</p>
+                              
                             </div>
                           </div>
 
@@ -71,7 +71,7 @@
                             <label class="control-label" for="textinput">Event Start Date</label>
                             <div class="controls">
                               <input id="EventDate" name="EventDate" type="date" placeholder="mm/dd/yyyy" class="input-xlarge" required="">
-                              <p class="help-block">Event Date</p>
+                              
                             </div>
                           </div>
 
@@ -79,7 +79,7 @@
                             <label class="control-label" for="textinput">Event Start Time</label>
                             <div class="controls">
                               <input id="startTime" name="startTime" type="time" placeholder="hh:mm" class="input-xlarge" required="">
-                              <p class="help-block">Event Start Time </p>
+                             
                             </div>
                           </div>
 
@@ -87,7 +87,7 @@
                             <label class="control-label" for="textinput">Event End Date</label>
                             <div class="controls">
                               <input id="EventEndDate" name="EventEndDate" type="date" placeholder="mm/dd/yyyy" class="input-xlarge" required="">
-                              <p class="help-block">Event End Date</p>
+                            
                             </div>
                           </div>
 
@@ -95,7 +95,7 @@
                             <label class="control-label" for="textinput">Event End Time</label>
                             <div class="controls">
                               <input id="endTime" name="endTime" type="time" placeholder="hh:mm" class="input-xlarge" required="">
-                              <p class="help-block">Event End Time </p>
+                            
                             </div>
                           </div>
 
@@ -104,7 +104,7 @@
                             <label class="control-label" for="Event Location">Event Address</label>
                             <div class="controls">
                               <input id="EventLocation" name="EventLocation" type="text" placeholder="123 Main St. " class="input-medium">
-                              <p class="help-block">Event Location</p>
+                          
                             </div>
                           </div>
 
@@ -133,12 +133,7 @@
                           </div>
 
                           <!-- Button -->
-                          <div class="control-group">
-                            <label class="control-label" for="submit">Submit</label>
-                            <div class="controls">
-                              <button  onclick="newEvent1();" class="btn btn-primary">Save</button>
-                            </div>
-                          </div>
+                         
 
                           </fieldset>
                           </div>
@@ -148,7 +143,7 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button"  onclick="newEvent1();" class="btn btn-primary">Save changes</button>
 
 
 
@@ -157,10 +152,6 @@
                   </div>
                 </div>
 
-
-            <ol class="breadcrumb">
-              <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
-            </ol>
           </div>
         </div><!-- /.row -->
 
@@ -180,24 +171,30 @@
             });
         </script>
         <div class="col-lg-8 col-lg-offset-2">
-          <div id="my-timeline"></div>
+          <div id="my-timeline" style="border: 0;"></div>
+          <br/>
       </div>
 </div>
 </div>
 
+ <div class="row">
         <?php 
   foreach ($event as $event_item) {
   ?>
-  <div class="row">
-          <div class="col-lg-12">
-            <div class"event">
+  
+          <div class="col-lg-6">
+            <div class="event">
             <h2><a href='/event/view/<?php echo $event_item->handle; ?>'> <?php echo $event_item->event_name; ?> </a></h2>
             <h4> <strong>at</strong> <?echo $event_item->location;?> <strong>on</strong> <?php echo $event_item->start_time;?> </h4>
             <p> <?php echo $event_item->event_description; ?> </p>
+          </div>
+        </div>
 <?php              
                 
   }
 
 ?>
        
-        </div>
+</div> <!-- End Events Row --!>
+
+
