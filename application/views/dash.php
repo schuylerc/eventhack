@@ -22,3 +22,33 @@
         </div>
 
         </div>
+
+         <div class="row">
+          <div class="col-lg-12">
+            <div class"event">
+            <h2>Event Name</h2> <h4> <strong>at</strong> @Location <strong>on</strong> Monday 01,01,2014</h4>
+            <p>Event Desciprtion</p>
+          </div>
+        </div>
+
+        </div>
+
+         <div class="row">
+          <div class="col-lg-12">
+            <div class"event">
+            <h2>Event Name</h2> <h4> <strong>at</strong> @Location <strong>on</strong> Monday 01,01,2014</h4>
+            <p>Event Desciprtion</p>
+          </div>
+        </div>
+
+        </div>
+
+         <div class="row">
+          <div class="col-lg-12">
+            <div class"event">
+            <h2>Event Name</h2> <h4> <strong>at</strong> @Location <strong>on</strong> Monday 01,01,2014</h4>
+            <p>Event Desciprtion</p>
+          </div>
+        </div>
+
+        </div>

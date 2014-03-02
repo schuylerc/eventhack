@@ -14,7 +14,7 @@ class Dash extends CI_Controller {
 		//$this->load->view('connect/home');
 		//$this->endView();
 		$this->load->view('header');
-		$this->load->view('content');
+		$this->load->view('dash');
 		$this->load->view('footer');
 	
 	}
