@@ -21,7 +21,6 @@ class Dash extends MY_Controller {
 	}
 	
 	public function test(){
-		$this->beginView();
 		$this->load->view('event/view');
 		$this->endView();
 	}

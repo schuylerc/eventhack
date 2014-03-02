@@ -27,7 +27,9 @@
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-what">
 		 <h2 class = "event-heading">What:</h2>
-		 <p class = "event-text"><?php echo $eDetail->event_description; ?></p>
+			 <div class = "col-lg-6-offset-3" style="padding:10px;">
+			 	<p class = "event-text"><?php echo $eDetail->event_description; ?></p>
+			 </div>
 		</div>
 	</div> <!--  includes wireless info and other misc info -->
 	
@@ -44,7 +46,7 @@
 			</div>
 		</div>
 		
-	</div> <!-- includes parking info, campus map(google map api), floor plans -->
+	</div>
 	
 	<div class = "row-fluid">
 		<div class = "col-lg-12 event-when">
@@ -53,7 +55,8 @@
 			<p class = "event-date-text">at <?php echo date("h:iA",strtotime($eDetail->start_time)); ?></p>
 			<div align = "center" class = "col-lg-12">		
 				<script>
-					var myCountdown1 = new Countdown({time:316});
+					var timeToCD = <?php echo json_encode((strtotime($eDetail->start_time)) - time()); ?>;
+					var myCountdown1 = new Countdown({time:timeToCD});
 				</script>
 			</div>
 		</div>
