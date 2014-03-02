@@ -55,7 +55,7 @@
 
                           <!-- Form Name -->
                           
-
+                          
 
                           <!-- Text input-->
                           <div class="control-group">
@@ -136,6 +136,7 @@
                          
 
                           </fieldset>
+
                           </div>
 
                           <div id="eventStatus"></div>
