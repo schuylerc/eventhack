@@ -18,6 +18,17 @@
 	href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
 <link rel="stylesheet" 
 	href="/assets/css/event.css">
+	
+<!-- Javascript here -->
+	
+<script type= "text/javascript" src="myscripts.js"></script>
+
+<style>
+html, body, #map {
+  height: 100%;
+  margin: 0;
+}
+</style>
 
 </head>
 <body>
@@ -26,7 +37,7 @@
 		<span class="col-lg-12">
 			<h1>{Event Name}</h1>
 		</span>
-	<div>
+	</div>
 	<div class = "row-fluid">
 		<span class="col-lg-12">
 			<button type="button" class="btn btn-primary btn-lg">Register!</button>
@@ -48,6 +59,10 @@
 	<div class = "row-fuild">
 		<div class = "col-lg-12 event-when">
 			<h2 id = "event-when-heading">When:</h2>
+		</div>
+		<div>
+			<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<div id="map"></div>
 		</div>
 	</div> <!-- include countdown timer,  -->
 	
