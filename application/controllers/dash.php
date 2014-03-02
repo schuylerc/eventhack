@@ -4,6 +4,7 @@ class Dash extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+
 		//$this->checkLogin();
 	}
 	
@@ -13,16 +14,13 @@ class Dash extends CI_Controller {
 		//get vars
 		//$this->load->view('connect/home');
 		//$this->endView();
-		$this->load->view('header');
+		//get user info
+
+        $data['user'] = $this->ion_auth->user()->row();
+		$this->load->view('header', $data);
 		$this->load->view('dash');
 		$this->load->view('footer');
 	
 	}
-	
-	public function signin()
-	{
-		
-		$this->load->view('signin');
-		
-	}
+
 }
